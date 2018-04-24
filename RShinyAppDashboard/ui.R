@@ -59,7 +59,25 @@ body <- dashboardBody(
         tabPanel("Fun Fact 2")
       )
     ),
-    tabItem(tabName = "inputs")
+    tabItem(
+      tabName = "inputs",
+      fluidRow(
+        # Row 1
+        box(
+          width = 12,
+          title = "Regular Box, Row 1",
+          "Star Wars"
+        )
+      ),
+      fluidRow(
+        # Row 2
+        box(
+          width = 12,
+          title = "Regular Box, Row 2",
+          "Nothing but Star Wars"
+        )
+      )
+    )
   )
 )
 
