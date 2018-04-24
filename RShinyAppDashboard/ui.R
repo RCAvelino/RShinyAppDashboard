@@ -43,6 +43,10 @@ sidebar <- dashboardSidebar(
     menuItem(
       "Inputs",
       tabName = "inputs"
+    ),
+    menuItem(
+      "Column Layout",
+      tabName = "colLayout"
     )
   )
 )
@@ -75,6 +79,27 @@ body <- dashboardBody(
           width = 12,
           title = "Regular Box, Row 2",
           "Nothing but Star Wars"
+        )
+      )
+    ),
+    tabItem(
+      tabName = "colLayout",
+      fluidRow(
+        # Column 1
+        column(width = 6,
+               infoBox(
+                 width = NULL,
+                 title = "Regular Box, Column 1",
+                 subtitle = "Gimme those Star Wars"
+               )
+        ),
+        # Column 2
+        column(width = 6,
+               infoBox(
+                 width = NULL,
+                 title = "Regular Box, Column 2",
+                 subtitle = "Don't let them end"
+               )
         )
       )
     )
